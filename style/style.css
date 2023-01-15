@@ -78,7 +78,40 @@ Top Blogs style
 /*---------------------------
 --------Lates Course----------
 __________________*/
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
 .course .course-banner img{
     width: 224px;
     height: 104px;
 }
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-solid{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.emtry{
+    color: #A2A2A2;
+}
+/*-------------
+-----------Media Query-------
+-----------*/
+/*Moble device*/
+@media screen and (max-width: 668px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+       flex-direction: column;
+    }
